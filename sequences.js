@@ -9,14 +9,14 @@ var b = {
 };
 
 var lcolors = {"nan": '#402453',
- 'Health Care': '#a2b00d',
+ 'Health Care': '#7be5f9',
  'Miscellaneous': '#d6feec',
  'Consumer Services': '#b42873',
  'Finance': '#8b9601',
  'Basic Industries': '#b064c9',
  'Transportation': '#bda87f',
  'Capital Goods': '#cd836e',
- 'Consumer Durables': '#7be5f9',
+ 'Consumer Durables': '#a2b00d',
  'Consumer Non-Durables': '#87c216',
  'Energy': '#f7d669',
  'Technology': '#3008e5',
@@ -7368,6 +7368,8 @@ var arc = d3.arc()
     .innerRadius(function(d) { return Math.sqrt(d.y0); })
     .outerRadius(function(d) { return Math.sqrt(d.y1); });
 
+
+
 // Use d3.text and d3.csvParseRows so that we do not need to have a header
 // row, and can receive the csv as an array of arrays.
 d3.text("./data/company.csv", function(text) {
@@ -7375,6 +7377,8 @@ d3.text("./data/company.csv", function(text) {
   var json = buildHierarchy(csv);
   createVisualization(json);
 });
+
+
 
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
@@ -7484,6 +7488,8 @@ function initializeBreadcrumbTrail() {
     .style("fill", "#000");
 }
 
+
+
 // Generate a string that describes the points of a breadcrumb polygon.
 function breadcrumbPoints(d, i) {
   var points = [];
@@ -7583,6 +7589,8 @@ function toggleLegend() {
     legend.style("visibility", "hidden");
   }
 }
+
+
 
 // Take a 2-column CSV and transform it into a hierarchical structure suitable
 // for a partition layout. The first column is a sequence of step names, from
