@@ -5,7 +5,7 @@ var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 200, h: 30, s: 1, t: 20
+  w: 400, h: 30, s: 1, t: 20
 };
 
 var lcolors = {"nan": '#402453',
